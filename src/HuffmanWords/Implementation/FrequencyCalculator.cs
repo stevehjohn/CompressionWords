@@ -48,7 +48,6 @@ public class FrequencyCalculator
             }
 
             word.Append(input[i]);
-
         }
 
         return frequencies.Select(f => new WordFrequency { Word = f.Key, Frequency = f.Value });

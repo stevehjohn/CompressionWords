@@ -53,7 +53,12 @@ public class HuffmanTree
 
     public string GetPath(string word)
     {
-        var node = _nodes.Single(n => n.Word == word);
+        var node = _nodes.FirstOrDefault(n => n.Word == word);
+
+        if (node == null)
+        {
+            return null;
+        }
 
         var pathToRoot = new List<HuffmanNode>();
 
