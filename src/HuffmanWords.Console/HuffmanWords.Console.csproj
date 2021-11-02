@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +14,19 @@
   <ItemGroup>
     <Folder Include="Infrastructure\" />
     <Folder Include="Handlers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HuffmanWords\HuffmanWords.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Supporting Files\Styles.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Supporting Files\Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

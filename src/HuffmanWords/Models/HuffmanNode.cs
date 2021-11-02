@@ -1,9 +1,13 @@
-﻿namespace HuffmanWords.Models;
+﻿using HuffmanWords.Implementation;
+
+namespace HuffmanWords.Models;
 
 public class HuffmanNode
 {
-    public char Word { get; set; }
+    [SecondarySort]
+    public string Word { get; set; }
 
+    [Priority]
     public int Frequency { get; set; }
 
     public HuffmanNode Left { get; set; }

@@ -1,9 +1,11 @@
-﻿using CommandLine;
+﻿using System.Diagnostics.CodeAnalysis;
+using CommandLine;
 using HuffmanWords.Console.Handlers;
 using HuffmanWords.Console.Options;
 
 namespace HuffmanWords.Console.Infrastructure;
 
+[ExcludeFromCodeCoverage]
 public class EntryPoint
 {
     public static void Main(string[] arguments)

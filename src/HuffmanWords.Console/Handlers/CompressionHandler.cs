@@ -1,7 +1,9 @@
-﻿using HuffmanWords.Console.Options;
+﻿using System.Diagnostics.CodeAnalysis;
+using HuffmanWords.Console.Options;
 
 namespace HuffmanWords.Console.Handlers;
 
+[ExcludeFromCodeCoverage]
 public class CompressionHandler
 {
     private readonly CompressionOptions _options;
