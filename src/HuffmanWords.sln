@@ -17,6 +17,15 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuffmanWords.Console", "HuffmanWords.Console\HuffmanWords.Console.csproj", "{08F6C40D-DC53-4C08-8B18-959BE9620CF7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visualisations", "Visualisations", "{6D10790C-85D9-45A5-BB58-D69F0AA6E279}"
+	ProjectSection(SolutionItems) = preProject
+		..\visualisations\A Tale of Two Cities.html = ..\visualisations\A Tale of Two Cities.html
+		..\visualisations\Frankenstein or the Modern Prometheus.html = ..\visualisations\Frankenstein or the Modern Prometheus.html
+		..\visualisations\Great Expectations.html = ..\visualisations\Great Expectations.html
+		..\visualisations\Les Misérables.html = ..\visualisations\Les Misérables.html
+		..\visualisations\Pride and Prejudice.html = ..\visualisations\Pride and Prejudice.html
+		..\visualisations\Stevo.html = ..\visualisations\Stevo.html
+		..\visualisations\War of the Worlds.html = ..\visualisations\War of the Worlds.html
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
