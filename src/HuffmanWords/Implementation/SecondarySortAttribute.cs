@@ -1,6 +1,5 @@
-﻿namespace HuffmanWords.Implementation
+﻿namespace HuffmanWords.Implementation;
+
+public class SecondarySortAttribute : Attribute
 {
-    public class SecondarySortAttribute : Attribute
-    {
-    }
 }

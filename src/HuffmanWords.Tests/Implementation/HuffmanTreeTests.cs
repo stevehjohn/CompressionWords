@@ -6,8 +6,6 @@ namespace HuffmanWords.Tests.Implementation;
 
 public class HuffmanTreeTests
 {
-    // This is a test. It is a random sentence.
-
     [Fact]
     public void Build_creates_expected_tree()
     {
