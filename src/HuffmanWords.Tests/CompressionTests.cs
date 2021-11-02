@@ -13,11 +13,12 @@ public class CompressionTests
         _testOutputHelper = testOutputHelper;
     }
 
+    [NCrunch.Framework.Timeout(240000)]
     [Theory]
     //[InlineData("A Tale of Two Cities.txt")]
     //[InlineData("Frankenstein or the Modern Prometheus.txt")]
     //[InlineData("Great Expectations.txt")]
-    //[InlineData("Les Misérables.txt")]
+    [InlineData("Les Misérables.txt")]
     //[InlineData("Pride and Prejudice.txt")]
     [InlineData("War of the Worlds.txt")]
     public void File_compresses_and_decompresses(string filename)

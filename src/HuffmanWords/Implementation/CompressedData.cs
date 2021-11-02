@@ -1,4 +1,5 @@
-﻿using HuffmanWords.Models;
+﻿using System.Text;
+using HuffmanWords.Models;
 
 namespace HuffmanWords.Implementation;
 
@@ -12,29 +13,21 @@ public class CompressedData
 
     public byte[] Save()
     {
-        //var frequencies = Frequencies.ToList();
+        using var stream = new MemoryStream();
 
-        //var frequencyTable = new byte[frequencies.Count * 8];
+        stream.Write(BitConverter.GetBytes(OriginalLength));
 
-        //var count = 0;
+        stream.Write(BitConverter.GetBytes(Data.Length));
 
-        //foreach (var item in frequencies)
-        //{
-        //    Buffer.BlockCopy(BitConverter.GetBytes(item.Frequency), 0, frequencyTable, count * 8, 4);
-        //    Buffer.BlockCopy(BitConverter.GetBytes((int) item.Character), 0, frequencyTable, count * 8 + 4, 4);
+        stream.Write(Data);
 
-        //    count++;
-        //}
+        foreach (var frequency in Frequencies)
+        {
+            stream.Write(BitConverter.GetBytes(frequency.Frequency));
 
-        //var data = new byte[8 + frequencyTable.Length + Data.Length];
+            stream.Write(Encoding.UTF8.GetBytes($"{frequency.Word}\0"));
+        }
 
-        //Buffer.BlockCopy(BitConverter.GetBytes(frequencies.Count), 0, data, 0, 4);
-        //Buffer.BlockCopy(BitConverter.GetBytes(OriginalLength), 0, data, 4, 4);
-        //Buffer.BlockCopy(frequencyTable, 0, data, 8, frequencyTable.Length);
-        //Buffer.BlockCopy(Data, 0, data, 8 + frequencyTable.Length, Data.Length);
-
-        //return data;
-
-        throw new NotImplementedException();
+        return stream.ToArray();
     }
 }
